@@ -1,6 +1,20 @@
 <html>
     <head> 
 <title>Test Page</title>
+<script>
+    function calculateDaysBetweenDates(begin, end) {
+        var date1 = new Date(begin);
+        var date2 = new Date(end);
+        var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+        var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+        return diffDays;
+    }
+
+    //function to calculate if a year is a leap year
+    function isLeapYear(year) {
+        return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+    }
+</script>
     </head>
 
     <body>
